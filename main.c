@@ -8,19 +8,22 @@ double main (int argc, char* argv[])
 	scanf("%s", &str);
 	while(str[i] != '\0')
 	{
-		short j = 0;
+		short j   = 0,
+		duplicate = 0;
 		while(str[j] != '\0')
 		{
-			if(str[i] == str[j+1] || str[i] == str[i+j])
+			if(str[i] == str[j])
 			{
-				break;
+				duplicate++;
+				if(duplicate == 2)
+				{
+					printf( "(" );
+					break;
+				}
 			}
 			j++;
-		
 		}
-		if(str[i] == str[j+1]) printf( "(" );
-		else printf( ")" );
-		j = 0;
+		if(str[j] == '\0') printf( ")" );
 		i++;
 	}
 }
