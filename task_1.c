@@ -5,7 +5,7 @@ double main (int argc, char* argv[])
 	short i = 0;
 	char str[100];
 	
-	scanf("%s", &str);
+	scanf("%s", str);
 	while(str[i] != '\0')
 	{
 		short j   = 0,
